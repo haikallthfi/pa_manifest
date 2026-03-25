@@ -14,8 +14,8 @@
            review="gerrit.aospa.co"
            revision="quartz" />
 
-  <remote  name="caf"
-           fetch="https://source.codeaurora.org/quic/la" />
+  <remote  name="clo"
+           fetch="https://staging-git.codelinaro.org/clo/la" />
 
   <remote  name="blobs"
            fetch="https://github.com/ThankYouMario"
@@ -30,13 +30,13 @@
   <remote name="gitlab"
            fetch="https://gitlab.com"/>
 
-  <remote  name="caf_bluetooth"
-           fetch="git://source.codeaurora.org/quic/la"
-           review="codeaurora.org"
+  <remote  name="clo_bluetooth"
+           fetch="https://staging-git.codelinaro.org/clo/la"
+           review="codelinaro.org"
            revision="refs/tags/LA.UM.8.15.r1-06800-KAMORTA.0" />
 
-  <default revision="refs/tags/LA.UM.8.15.r1-06800-KAMORTA.0"
-           remote="caf"
+  <default revision="refs/tags/android-10.0.0_r41"
+           remote="aosp"
            sync-j="4"
            sync-c="true"/>
 
@@ -516,7 +516,7 @@
   <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy"/>
   <project name="platform/hardware/nxp/nfc" path="hardware/nxp/nfc"/>
   <project name="platform/hardware/nxp/secure_element" path="hardware/nxp/secure_element"/>
-  <project name="platform/hardware/qcom/audio" path="vendor/qcom/opensource/audio-hal/primary-hal"/>
+  <project name="platform/hardware/qcom/audio" path="vendor/qcom/opensource/audio-hal/primary-hal" remote="clo" revision="refs/tags/LA.UM.8.15.r1-06800-KAMORTA.0" />
   <project name="platform/hardware/qcom/bootctrl" path="hardware/qcom/bootctrl"/>
   <project name="platform/hardware/qcom/camera" path="hardware/qcom/camera"/>
   <project name="platform/hardware/qcom/display" path="hardware/qcom/display">
@@ -788,13 +788,13 @@
   <project name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver"/>
   <project name="platform/vendor/qcom-opensource/audio" path="vendor/qcom/opensource/audio"/>
   <project name="platform/vendor/qcom-opensource/audio-hal/st-hal" path="vendor/qcom/opensource/audio-hal/st-hal"/>
-  <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/commonsys/bluetooth" remote="caf_bluetooth"/>
-  <project name="platform/vendor/qcom-opensource/bluetooth-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/bluetooth" remote="caf_bluetooth">
+  <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/commonsys/bluetooth" remote="clo_bluetooth"/>
+  <project name="platform/vendor/qcom-opensource/bluetooth-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/bluetooth" remote="clo_bluetooth">
     <linkfile dest="vendor/qcom/defs/board-defs/system/bt-commonsys-intf-board.mk" src="bt-commonsys-intf-board.mk"/>
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/bt-commonsys-intf-board.mk" src="bt-commonsys-intf-board.mk"/>
     <linkfile dest="vendor/qcom/defs/product-defs/system/bt-system-opensource-product.mk" src="bt-system-opensource-product.mk"/>
   </project>
-  <project name="platform/vendor/qcom-opensource/bluetooth_ext" path="vendor/qcom/opensource/commonsys/bluetooth_ext" remote="caf_bluetooth"/>
+  <project name="platform/vendor/qcom-opensource/bluetooth_ext" path="vendor/qcom/opensource/commonsys/bluetooth_ext" remote="clo_bluetooth"/>
   <project name="platform/vendor/qcom-opensource/core-utils" path="vendor/qcom/opensource/core-utils">
     <linkfile dest="vendor/qcom/build/tasks/QSSI_violators.mk" src="build/QSSI_violators.mk"/>
     <linkfile dest="vendor/qcom/build/tasks/QMAA_enforcement.mk" src="build/QMAA_enforcement.mk"/>
@@ -828,11 +828,11 @@
   </project>
   <project name="platform/vendor/qcom-opensource/recovery-ext" path="vendor/qcom/opensource/recovery-ext"/>
   <project name="platform/vendor/qcom-opensource/shortcut-fe" path="shortcut-fe"/>
-  <project name="platform/vendor/qcom-opensource/system/bt" path="vendor/qcom/opensource/commonsys/system/bt" remote="caf_bluetooth"/>
+  <project name="platform/vendor/qcom-opensource/system/bt" path="vendor/qcom/opensource/commonsys/system/bt" remote="clo_bluetooth"/>
   <project name="platform/vendor/qcom-opensource/thermal-engine" path="vendor/qcom/opensource/thermal-engine"/>
   <project name="platform/vendor/qcom-opensource/time-services" path="vendor/qcom/opensource/time-services"/>
   <project name="platform/vendor/qcom-opensource/tools" path="vendor/qcom/opensource/tools"/>
-  <project name="platform/vendor/qcom-opensource/usb" path="vendor/qcom/opensource/usb"/>
+  <project name="platform/vendor/qcom-opensource/usb" path="vendor/qcom/opensource/usb" remote="clo" revision="refs/tags/LA.UM.8.15.r1-06800-KAMORTA.0" />
   <project name="platform/vendor/qcom-opensource/vibrator" path="vendor/qcom/opensource/vibrator"/>
   <project name="platform/vendor/qcom-opensource/wfd-commonsys" path="vendor/qcom/opensource/commonsys-intf/wfd"/>
   <project name="platform/vendor/qcom-opensource/wigig" path="vendor/qcom/opensource/wigig"/>
